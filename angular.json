@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "odata-grid-service": {
+      "projectType": "library",
+      "root": "projects/odata-grid-service",
+      "sourceRoot": "projects/odata-grid-service/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/odata-grid-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/odata-grid-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/odata-grid-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/odata-grid-service/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
