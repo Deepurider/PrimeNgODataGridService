@@ -1,6 +1,10 @@
 {
   "name": "odata-grid-service",
-  "version": "0.0.1",
+  "version": "0.0.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Deepurider/PrimeNgODataGridService.git"
+  },
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0"
